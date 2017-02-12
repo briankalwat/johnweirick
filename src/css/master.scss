@@ -1,0 +1,100 @@
+@import "defaults";
+@import "junction-framework/lib/framework";
+
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,800,800i');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,900,900i');
+
+// Fix for floating
+.floating:before, .floating--left:before, .floating--right:before, .floating--top:before, .floating--bottom:before {
+	margin-right: -.3em;
+}
+
+.image--rounded {
+	border-radius: 9999px;
+}
+
+html {
+	background-color: $brand-color;
+}
+
+h1,h2,h3,h4,h5,h6, input {
+	font-family: 'Nunito Sans', sans-serif !important;
+}
+
+h1,h2,h3 {
+	letter-spacing: -1.5px;
+}
+
+h4, h5, h6 {
+	letter-spacing: -.5px;
+}
+
+p, li, label {
+	font-family: 'Lato', sans-serif;
+}
+
+.smaller {
+	font-size: $base-font-size * .85;
+}
+
+.normal-weight {
+	font-weight: normal;
+}
+
+body {
+	overflow: hidden;
+}
+
+.list--unstyled {
+	list-style: none;
+	margin: 0;
+}
+
+input.btn {
+	@extend %btn;
+	display: inline-block;
+	width: auto;
+}
+
+.grid--condensed {
+	margin-left: -$base-spacing-unit;
+
+	.grid__item {
+		padding-left: $base-spacing-unit;
+	}
+}
+
+// Navigation
+#primary-nav {
+	position: fixed;
+	z-index: 10;
+}
+
+nav {
+	ul {
+		margin: 0;
+	}
+	li {
+		display: inline-block;
+		margin: 0;
+
+		a {
+			font-size: $base-font-size*.9;
+			font-weight: 900;
+			display: inline-block;
+			padding: $base-spacing-unit*.75 - 1 $base-spacing-unit*.5 $base-spacing-unit*.75 + 1;
+			margin: 0;
+			text-decoration: none;
+			color: $light-color;
+			@include vendor(transition, all, $global-duration $global-function);
+
+			&:hover {
+				color: $brand-color;
+			}
+		}
+
+		a.active {
+			color: $brand-color;
+		}
+	}
+}

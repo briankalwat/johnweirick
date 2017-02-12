@@ -1,0 +1,10 @@
+name: "JohnWeirick"
+tasks: 
+	sass:
+	    group: "application"
+	    src: "src/**/*"
+	    combine: false
+	    dest: "dist/"
+	livereload:
+	    endpoint: "NewSpring/norma-livereload"
+	    dev: true

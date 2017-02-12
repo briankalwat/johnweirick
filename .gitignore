@@ -1,0 +1,8 @@
+.DS_Store
+_resources
+assets
+craft/app
+craft/config
+craft/storage
+dist
+node_modules

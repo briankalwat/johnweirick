@@ -1,0 +1,17 @@
+{
+  "name": "JohnWeirick",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "norma-livereload": "github:newspring/norma-livereload"
+  },
+  "dependencies": {
+    "norma-sass": "^0.4.17"
+  }
+}
