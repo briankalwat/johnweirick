@@ -9,16 +9,44 @@
 	margin-right: -.3em;
 }
 
+section {
+	position: relative;
+}
+
+.cover-parent {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.blurred {
+	filter: blur(15px) grayscale(100%);
+}
+
 .image--rounded {
 	border-radius: 9999px;
+}
+
+.nd {
+	background-color: rgba(0,0,0,.3);
 }
 
 html {
 	background-color: $brand-color;
 }
 
+.heading-font {
+	font-family: 'Nunito Sans', sans-serif;
+}
+
+.copy-font {
+	font-family: 'Lato', sans-serif;
+}
+
 h1,h2,h3,h4,h5,h6, input {
-	font-family: 'Nunito Sans', sans-serif !important;
+	font-family: 'Nunito Sans', sans-serif;
 }
 
 h1,h2,h3 {
@@ -31,24 +59,69 @@ h4, h5, h6 {
 
 p, li, label {
 	font-family: 'Lato', sans-serif;
+	font-size: $base-font-size*1.15;
+	line-height: $line-height-ratio;
 }
 
-.smaller {
+p, ul, ol {
+	margin-bottom: $base-spacing-unit;
+}
+
+ol, ul {
+	margin-left: $base-spacing-unit/1.75;
+}
+
+hr {
+	border: none;
+	margin: $base-spacing-unit*1.5 auto $base-spacing-unit*1.5;
+	border-top: 5px solid $light-color;
+
+	&.skinny {
+		width: $base-spacing-unit*2;
+	}
+}
+
+.text-smaller {
 	font-size: $base-font-size * .85;
+}
+
+.text-larger {
+	@include media-query(lap-and-up) {
+		font-size: $base-font-size * 1.35;
+		line-height: $base-line-height * 1.25;
+	}
 }
 
 .normal-weight {
 	font-weight: normal;
 }
 
-body {
-	overflow: hidden;
-}
-
 .list--unstyled {
 	list-style: none;
 	margin: 0;
 }
+
+.btn {
+	@include vendor(transition, all, $global-duration/2 $global-function);
+
+	& + .btn {
+		margin-left: $base-spacing-unit/4;
+	}
+
+	@include media-query(handheld) {
+		display: block;
+		width: 100%;
+		max-width: 300px;
+		margin-bottom: $base-spacing-unit/2;
+		margin-left: auto !important;
+		margin-right: auto !important;
+
+		& + .btn {
+			margin-bottom: 0;
+		}
+	}
+}
+
 
 input.btn {
 	@extend %btn;
@@ -65,36 +138,86 @@ input.btn {
 }
 
 // Navigation
+.nav-toggle {
+	font-family: "FontAwesome";
+	font-size: $base-font-size*1.5;
+	position: fixed;
+	top: $base-spacing-unit*.75;
+	right: 0;
+	margin-right: -$base-spacing-unit/2;
+	padding: $base-spacing-unit/4 $base-spacing-unit*.65 $base-spacing-unit/4 $base-spacing-unit/5;
+	cursor: pointer;
+	color: $dark-color;
+	background-color: darken($light-color, 10);
+	border-radius: 5px;
+	z-index: 11;
+
+	@include media-query(lap-wide-and-up) {
+		display: none;
+	}
+}
+
 #primary-nav {
 	position: fixed;
+	top: 0;
+	right: -100%;
+	bottom: 0;
+	left: 100%;
+	background-color: $light-color;
 	z-index: 10;
+	@include vendor(transition, all, $global-duration $global-function);
+
+	&.open {
+		right: 0;
+		left: 0;
+	}
+	
+	@include media-query(lap-wide-and-up) {
+		position: fixed;
+		right: 0;
+		left: 0;
+		bottom: auto;
+		box-shadow: 0 0 8px rgba(0, 0, 0, .2);
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0.9+90,0.85+100 */
+		background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0.9) 90%, rgba(255,255,255,0.85) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0.9) 90%,rgba(255,255,255,0.85) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0.9) 90%,rgba(255,255,255,0.85) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d9ffffff',GradientType=0 ); /* IE6-9 */
+	}
 }
 
 nav {
 	ul {
+		list-style: none;
 		margin: 0;
 	}
 	li {
-		display: inline-block;
+		
 		margin: 0;
 
 		a {
-			font-size: $base-font-size*.9;
+			font-size: $base-font-size*1.15;
 			font-weight: 900;
 			display: inline-block;
-			padding: $base-spacing-unit*.75 - 1 $base-spacing-unit*.5 $base-spacing-unit*.75 + 1;
+			padding: $base-spacing-unit * .4 - 1 $base-spacing-unit*.5 $base-spacing-unit * .4 + 1;
 			margin: 0;
 			text-decoration: none;
-			color: $light-color;
+			color: $dark-color;
 			@include vendor(transition, all, $global-duration $global-function);
 
-			&:hover {
+			&:hover, &.active {
 				color: $brand-color;
 			}
 		}
 
-		a.active {
-			color: $brand-color;
+		@include media-query(lap-wide-and-up) {
+			display: inline-block;
+
+			a {
+				font-size: $base-font-size*.9;
+				padding: $base-spacing-unit * .8 - 1 $base-spacing-unit*.4 $base-spacing-unit * .8 + 1;
+
+			}
 		}
 	}
 }

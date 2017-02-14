@@ -2,7 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
 <head>
 	<meta charset="utf-8" />
-	<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
+	<title>The Variable Life | Finding Clarity and Confidence in a World of Choices</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="home" href="{{ siteUrl }}" />
 	<link rel="stylesheet" href="/dist/css/master.css">
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
@@ -18,54 +19,58 @@
 		</span>
 	</section>
 
-	<section id="primary-nav" class="background--dark-primary text-light-primary">
-		<nav>
+	<div class="nav-toggle"><i class="fa fa-fw fa-bars"></i></div>
+
+	<section id="primary-nav" class="floating">
+		<nav class="floating__item">
 			<ul class="text-center">
 				<li><a href="#intro" class="active">Introduction</a></li>
 				<li><a href="#book">About the Book</a></li>
 				<li><a href="#testimonials">Testimonials</a></li>
 				<li><a href="#author">About the Author</a></li>
 				<li><a href="#team">Street Team</a></li>
+				<li><a href="#swag">Free Stuff</a></li>
 			</ul>
 		</nav>
 	</section>
 
-	<section id="intro">
-		<div class="shell constrain-page">
-			<div class="grid floating floating--left">
-				<div class="grid__item floating__item lap-wide-and-up-one-half lap-wide-and-up-hard">
-					<div class="ratio--square lap-visuallyhidden handheld-visuallyhidden background--cover" style="background-image: url('/dist/images/tvl.title.1.1x1.jpg');"></div>
-					<div class="ratio--landscape anchored-visuallyhidden lap-wide-visuallyhidden background--cover" style="background-image: url('/dist/images/tvl.title.1.2x1.jpg');"></div>
-
-				</div><div class="grid__item floating__item lap-wide-and-up-one-half lap-text-center handheld-text-center">
-					<div class="soft-ends">
-						<h2>On the brink of adulthood, one choice can change everything.</h2>
-						<p><i>Who will my friends be? Which college or career will I pursue? What does God want for me? Where will I find the answers?</i></p>
-						<p>These are the questions we ask ourselves in the midst of our biggest transitions. <b>This is a book about wrestling through those questions.</b></p>
-						<p class="flush"><a href="#" class="btn">Buy The Book</a></p>
-					</div>
-				</div>
-			</div>
+	<span id="intro">
+	<section>
+		<div class="shell hard">
+			<div class="ratio--square background--cover lap-wide-and-up-visuallyhidden" style="background-image: url('/dist/images/tvl.hero.5.1x1.jpg');"></div>
+			<div class="ratio--landscape background--cover lap-visuallyhidden handheld-visuallyhidden" style="background-image: url('/dist/images/tvl.hero.5.2x1.jpg');"></div>
 		</div>
 	</section>
 
+	<section class="background--dark-primary text-light-primary">
+		<div class="shell">
+			<div class="constrain-copy text-center">
+				<h2>On the brink of adulthood, one choice can change everything.</h2>
+				<p class="text-larger"><i>Who will my friends be? Which college or career will I pursue? What does God want for me? Where will I find the answers?</i></p>
+				<p>These are the questions we ask ourselves in the midst of our biggest transitions. <b>This is a book about wrestling through those questions.</b></p>
+				<p><a href="#swag" class="btn btn--filled text-dark-primary">Start Reading Now</a> <a href="#" class="btn">Buy The Book</a></p>
+			</div>
+		</div>
+	</section>
+	</span>
+
+	<span id="book">
 	<section>
-		<div class="ratio--thin background--cover" style="background-image:url('/dist/images/tvl.hero.2.4x1.jpg');"></div>
+		<div class="handheld-ratio--landscape lap-and-up-ratio--thin background--cover" style="background-image:url('/dist/images/tvl.hero.2.4x1.jpg');"></div>
 	</section>
 
-	<section id="book" class="background--dark-tertiary text-light-primary">
+	<section class="background--dark-tertiary text-light-primary">
 		<div class="shell constrain-page">
-			<div class="grid push-bottom">
+			<div class="grid">
 				<div class="grid__item text-center">
 					<h2>About The Book</h2>	
 				</div>
 			</div>
-			<div class="grid soft-ends">
-				<div class="grid__item lap-and-up-five-twelfths handheld-text-center">
-					<p>With relatable stories and thought­-provoking insights, <a href="http://johnweirick.com" class="text-light-primary">John Weirick</a> brings readers on his journey from avoiding change and challenges as a shy introvert to rethinking his faith, ambitions, and relationships to become a confident adult.</p>
-					<p><i>The Variable Life</i> is a collection of stories and observations about life to help you:</p>
-				</div><div class="grid__item lap-and-up-seven-twelfths">
-					<ul>
+			<div class="grid floating push-top">
+				<div class="grid__item floating__item handheld-text-center lap-text-center lap-wide-and-up-seven-twelfths text-left">
+					<p class="text-larger handheld-text-center"><b>With relatable stories and thought­-provoking insights,</b> John Weirick brings readers on his journey from avoiding change and challenges as a shy introvert to rethinking his faith, ambitions, and relationships to become a confident adult.</p>
+					<p class="handheld-text-center"><i>The Variable Life</i> is a collection of stories and observations about life to help you:</p>
+					<ul class="text-left">
 						<li>Gain Clarity About Who You Are and What To Do</li>
 						<li>Understand God’s Role in Your Life and in the World</li>
 						<li>Learn How to Navigate Conflict and Survive Difficult Transitions</li>
@@ -73,95 +78,96 @@
 						<li>See Why the Choices You Make Today Will Influence the Rest of Your Life</li>
 						<li>Live With Confidence Instead of Being Driven by Fear</li>
 					</ul>
-				</div><div class="grid__item push-top">
-					<div class="constrain-copy text-center">
-						<p><i>The Variable Life</i> is for people who want to find their way through the maze of variables, choices, and complexities of modern life, without losing sight of God or themselves.</p>
-					</div>
+				</div><div class="grid__item floating__item lap-wide-and-up-five-twelfths">
+					<p class="text-larger"><i>The Variable Life</i> is for people who want to find their way through the maze of variables, choices, and complexities of modern life, without losing sight of God or themselves.</p>
+					<p><a href="#swag" class="btn btn--filled text-dark-primary">Start Reading Now</a> <a href="#" class="btn" style="margin-top: 19.5px; margin-left: 0;">Buy The Book</a></p>
 				</div>
 			</div>
 		</div>
 	</section>
+	</span>
 
 	<section class="text-light-primary">
-		<div class="anchored-ratio--landscape portable-ratio--landscape palm-wide-ratio--square palm-ratio--squartrait background--cover" style="background-image:url('/dist/images/tvl.section.2.2x1.jpg');">
-			<div class="ratio__item floating floating--left">
-				<div class="grid floating__item">
-					<div class="grid__item anchored-one-half lap-wide-one-half lap-text-center handheld-text-center">
-						<div class="soft-double">
-							<h2>Your life is the story of the choices you make. What story is your life telling?</h2>
-							<p class="flush"><a href="#" class="btn">Buy The Book</a></p>
-						</div>
-					</div>
+		<div class="shell soft-sides lap-wide-and-up-soft-double-sides background--cover" style="background-image:url('/dist/images/tvl.section.2.2x1.jpg');">
+			<div class="cover-parent nd lap-wide-and-up-visuallyhidden"></div>
+			<div class="grid soft-ends">
+				<div class="grid__item lap-wide-and-up-one-half lap-text-center handheld-text-center">
+					<h2>Your life is the story of the choices you make. What story is your life telling?</h2>
+					<p><a href="#swag" class="btn btn--filled text-dark-primary">Start Reading Now</a> <a href="#" class="btn">Buy The Book</a></p>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section id="testimonials" class="">
-		<div class="shell constrain-page">
+	<section id="testimonials">
+		<div class="shell lap-wide-and-up-soft-double-sides constrain-page">
 			<div class="grid push-bottom">
 				<div class="grid__item text-center">
 					<h2>What People Are Saying</h2>	
 				</div>
 			</div>
 			<div class="grid">
-				<div class="grid__item--push-bottom lap-and-up-one-third">
-					<h4 class="normal-weight">"If you feel stuck, scared or insecure, this book is for you."</h4>
-					<p class="text-right flush"><span class="text-brand"><b>Dargan Thompson</b></span></p>
-					<p class="smaller text-right">Writer, Editor, and Former Editor at RELEVANT Magazine</p></p>
-				</div><div class="grid__item--push-bottom lap-and-up-two-thirds">
-					<h4 class="normal-weight">"You'll be encouraged, challenged, inspired, and best of all, supported by someone who's walking the journey with you."</h4>
-					<p class="text-right flush"><span class="text-brand"><b>Ricky and Krista Ortiz</b></span></p>
-					<p class="smaller text-right">Pastor and Speaker, Writer</p>
-				</div><div class="grid__item--push-bottom lap-and-up-two-thirds">
-					<h4 class="normal-weight">"The Variable Life is a gift for us all...we’ll find ourselves moved from our comfy couches and into the lives of the people around us."</h4>
-					<p class="text-right flush"><span class="text-brand"><b>Nate Ray</b></span></p>
-					<p class="smaller text-right">Pastor and Speaker</p>
-				</div><div class="grid__item--push-bottom lap-and-up-one-third">
-					<h4 class="normal-weight">"Refreshingly honest and inspiring."</h4>
-					<p class="text-right flush"><span class="text-brand"><b>Beth Marshall</b></span></p>
-					<p class="smaller text-right">Author of Grief Survivor: 28 Steps Toward Hope and Healing</p>
-				</div><div class="grid__item--push-bottom lap-and-up-one-third">
-					<h4 class="normal-weight">"This book is really, really good. I don’t say that about every book I read, either."</h4>
-					<p class="text-right flush"><span class="text-brand"><b>Rachel Dawson</b></span></p>
-					<p class="smaller text-right">Editor at <a href="http://www.therisingblog.com/blog/2016/12/14/a-variable-life-review" target="_blank">The Rising Blog</a></p>
-				</div><div class="grid__item--push-bottom lap-and-up-two-thirds">
-					<h4 class="normal-weight">"Reading this book helped me see how I can grow healthy relationships without losing myself in the process."</h4>
-					<p class="text-right flush"><span class="text-brand"><b>Stephanie Long</b></span></p>
-					<p class="smaller text-right">Writer and Editor</p>
+				<div class="grid__item push-bottom lap-wide-and-up-push-double-bottom lap-wide-and-up-one-third">
+					<h4 class="normal-weight handheld-text-center handheld-push-half-bottom">"If you feel stuck, scared or insecure, this book is for you."</h4>
+					<p class="text-right handheld-text-center flush"><span class="text-brand"><b>Dargan Thompson</b></span></p>
+					<p class="text-smaller text-right handheld-text-center">Writer, Editor, and Former Editor at RELEVANT Magazine</p></p>
+				</div><div class="grid__item push-bottom lap-wide-and-up-push-double-bottom lap-wide-and-up-two-thirds">
+					<h4 class="normal-weight handheld-text-center handheld-push-half-bottom">"You'll be encouraged, challenged, inspired, and best of all, supported by someone who's walking the journey with you."</h4>
+					<p class="text-right handheld-text-center flush"><span class="text-brand"><b>Ricky and Krista Ortiz</b></span></p>
+					<p class="text-smaller text-right handheld-text-center">Pastor and Speaker, Writer</p>
+				</div><div class="grid__item push-bottom lap-wide-and-up-push-double-bottom lap-wide-and-up-two-thirds">
+					<h4 class="normal-weight handheld-text-center handheld-push-half-bottom">"<i>The Variable Life</i> is a gift for us all...we’ll find ourselves moved from our comfy couches and into the lives of the people around us."</h4>
+					<p class="text-right handheld-text-center flush"><span class="text-brand"><b>Nate Ray</b></span></p>
+					<p class="text-smaller text-right handheld-text-center">Pastor and Speaker</p>
+				</div><div class="grid__item push-bottom lap-wide-and-up-push-double-bottom lap-wide-and-up-one-third">
+					<h4 class="normal-weight handheld-text-center handheld-push-half-bottom">"Refreshingly honest and inspiring."</h4>
+					<p class="text-right handheld-text-center flush"><span class="text-brand"><b>Beth Marshall</b></span></p>
+					<p class="text-smaller text-right handheld-text-center">Author of Grief Survivor: 28 Steps Toward Hope and Healing</p>
+				</div><div class="grid__item push-bottom lap-wide-and-up-push-double-bottom lap-wide-and-up-one-third">
+					<h4 class="normal-weight handheld-text-center handheld-push-half-bottom">"Reading this book helped me see how I can grow healthy relationships without losing myself in the process."</h4>
+					<p class="text-right handheld-text-center flush"><span class="text-brand"><b>Stephanie Long</b></span></p>
+					<p class="text-smaller text-right handheld-text-center">Writer and Editor</p>
+				</div><div class="grid__item push-bottom lap-wide-and-up-push-double-bottom lap-wide-and-up-two-thirds">
+					<h4 class="normal-weight handheld-text-center handheld-push-half-bottom">"<i>The Variable Life</i> is a book I'm so glad John wrote for us all—it's real, it's relatable, it's relevant, and it's meaningful. The stories he shares are thoughtful and impactful, and reading this book really helped me clarify my purpose for my life and work, as well as my plan for making the most out of both the good and hard stuff of life."</h4>
+					<p class="text-right handheld-text-center flush"><span class="text-brand"><b>Rachel Dawson</b></span></p>
+					<p class="text-smaller text-right handheld-text-center">Editor at <a href="http://www.therisingblog.com/blog/2016/12/14/a-variable-life-review" target="_blank">The Rising Blog</a></p>
 				</div>
 			</div>
 			<div class="grid">
 				<div class="grid__item text-center">
-					<p><a href="#" class="btn">More Reviews &amp; Endorsements</a></p>
+					<p><a href="#swag" class="btn btn--filled">Start Reading Now</a> <a href="#" class="btn">Buy The Book</a></p>
+					<p><a href="http://johnweirick.com/book">Read More Reviews &amp; Endorsements</a></p>
 				</div>
 			</div>
 		</div>
 	</section>
 
 	<section>
-		<div class="ratio--landscape background--cover" style="background-image:url('/dist/images/tvl.section.4.2x1.jpg');"></div>
+		<div class="palm-ratio--shuare palm-wide-ratio--landscape lap-ratio--landscape lap-wide-ratio--thin anchored-ratio--thin background--cover" style="background-image:url('/dist/images/tvl.section.4.2x1.jpg');"></div>
 	</section>
 
-	<section id="author" class="background--dark-primary text-light-primary">
+	<span id="author">	
+	<section class="background--dark-primary text-light-primary">
 		<div class="shell constrain-page">
-			<div class="grid floating floating--left">
-				<div class="grid__item floating__item lap-and-up-one-third">
-					<div class="ratio--square background--cover image--rounded flush" style="background-image: url('https://scontent-mia1-1.xx.fbcdn.net/v/t31.0-8/1014905_698519511298_1070506930_o.jpg?oh=5d2f3ae986155bc306aa6af7f826f5b3&oe=593384D4');">
+			<div class="grid floating">
+				<div class="grid__item floating__item lap-wide-one-third anchored-one-third">
+					<div class="ratio--square background--cover image--rounded push-bottom lap-wide-flush-bottom anchored-flush-bottom" style="background-image: url('https://scontent-mia1-1.xx.fbcdn.net/v/t31.0-8/1014905_698519511298_1070506930_o.jpg?oh=5d2f3ae986155bc306aa6af7f826f5b3&oe=593384D4'); max-width: 240px; margin-left: auto; margin-right: auto;">
 					
 					</div>
-				</div><div class="grid__item floating__item lap-and-up-two-thirds">
+				</div><div class="grid__item floating__item lap-wide-two-thirds lap-wide-text-left anchored-two-thirds anchored-text-left">
 					<h2>About John Weirick</h2>
 					<p>John Weirick is a writer on faith, culture, and relationships. An introvert transplant from Minnesota and Oregon, he lives in Greenville, South Carolina, where he's still learning euphemisms like "that dog don't hunt" and "bless your heart."</p>
-					<p class="flush">John's writings are featured on <i>The Huffington Post</i>, <i>RELEVANT Magazine</i>, <i>Lifehacker</i>, Donald Miller's <i>Storyline Blog</i>, and dozens of websites with millions of visitors. Follow along on <a href="http://johnweirick.com" target="_blank">johnweirick.com,</a> <a href="http://facebook.com/johnweirick" target="_blank">Facebook,</a> <a href="http://twitter.com/johnweirick" target="_blank">Twitter,</a> and <a href="http://instagram.com/johnweirick" target="_blank">Instagram.</a></p>
+					<p>John's writings are featured on <i>The Huffington Post</i>, <i>RELEVANT Magazine</i>, <i>Lifehacker</i>, Donald Miller's <i>Storyline Blog</i>, and dozens of websites with millions of visitors.</p> 
+					<p>Follow along on <a href="http://johnweirick.com" target="_blank">johnweirick.com,</a> <a href="http://facebook.com/johnweirick" target="_blank">Facebook,</a> <a href="http://twitter.com/johnweirick" target="_blank">Twitter,</a> and <a href="http://instagram.com/johnweirick" target="_blank">Instagram.</a></p>
 				</div>
 			</div>
 		</div>
 	</section>
+	</span>
 
 	<section id="team" class="">
 		<div class="shell constrain-page">
-			<div class="grid push-bottom">
+			<div class="grid">
 				<div class="grid__item text-center">
 					<h2>Join The Street Team</h2>	
 				</div>
@@ -208,9 +214,37 @@
 		</div>
 	</section>
 
+	<section id="swag" class="background--primary text-light-primary">
+		<div class="cover-parent background--cover  blurred" style="background-image: url('/dist/images/tvl.section.2.2x1.jpg'); opacity: .1;"></div>
+		<div class="shell constrain-page">
+			<div class="grid push-bottom">
+				<div class="grid__item text-center">
+					<h2>Free Stuff</h2>	
+				</div>
+			</div>
+			<div class="grid">
+				<div class="grid__item lap-and-up-one-half text-center handheld-push-bottom">
+					<h3>The Variable Life Soundtrack</h3>
+					<p>Download the free 15-song The Variable Life Soundtrack featuring Andrew Belle, Lovedrug, Bora York, and more.</p>
+					<p><a href="#" class="btn btn--light">Get it Now</a></p>
+				</div><div class="grid__item lap-and-up-one-half text-center">
+					<h3>Reading Guide</h3>
+					<p>Get more out of the book with these questions for your group discussion or personal reflection.</p>
+					<p><a href="#" class="btn btn--light">Get it Now</a></p>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<section class="background--dark-primary text-light-primary">
 		<div class="soft constrain-page">
-			<p class="flush"><small>&copy; 2017 <a href="http://johnweirick.com">John Weirck</a> &bullet; All Rights Reserved</small></p>
+			<div class="grid floating">
+				<div class="grid__item floating__item lap-and-up-one-half handheld-push-bottom">
+					<p class="text-left handheld-text-center flush"><small>Interested in writing a review? Download the <a href="#">Digital Press Kit.</a></small></p>
+				</div><div class="grid__item floating__item lap-and-up-one-half flush">
+					<p class="text-right handheld-text-center flush"><small>&copy; 2017 <a href="http://johnweirick.com">John Weirck</a> &bullet; All Rights Reserved</small></p>
+				</div>
+			</div>
 		</div>
 	</section>
 
@@ -238,5 +272,30 @@
 			Copyright {{ now.year }} {{ craft.request.serverName | ucfirst }}. All rights reserved  •  Built with <a href="http://craftcms.com">Craft</a>
 		</footer>
 	</div> #}
+
+	<script>
+		var nav = $('#primary-nav');
+		var toggle = $('.nav-toggle');
+
+		toggle.on('click', function(){
+			if (nav.hasClass('open')) {
+				nav.removeClass('open');
+				toggle.find('i').removeClass('fa-times');
+				toggle.find('i').addClass('fa-bars');
+			} else {
+				nav.addClass('open');
+				toggle.find('i').removeClass('fa-bars');
+				toggle.find('i').addClass('fa-times');
+			};
+		});
+
+		$('#primary-nav a').on('click',function(){
+			if (nav.hasClass('open')) {
+				nav.removeClass('open');
+				toggle.find('i').removeClass('fa-times');
+				toggle.find('i').addClass('fa-bars');
+			}
+		});
+	</script>
 </body>
 </html>

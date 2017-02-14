@@ -39,7 +39,7 @@ $base-border-size: 3px !default;
 $base-icon-size: 50px!default;
 
 // units
-$base-spacing-unit: $base-line-height!default;
+$base-spacing-unit: $base-line-height*1.5!default;
 $half-spacing-unit: $base-spacing-unit / 2!default;
 $base-page-width: 1280px!default;
 $global-duration: .15s;
