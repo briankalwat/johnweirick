@@ -9,6 +9,16 @@
 	margin-right: -.3em;
 }
 
+body {
+	background-color: $dark-color;
+}
+
+// header + section {
+// 	@include media-query(lap-wide-and-up) {
+// 		padding-top: 85px;
+// 	}
+// }
+
 section {
 	position: relative;
 }
@@ -219,5 +229,19 @@ nav {
 
 			}
 		}
+	}
+}
+
+// Modals
+
+.modal__item {
+	position: relative;
+
+	.close {
+		position: absolute;
+		top: -17px;
+		right: -13px;
+		font-size: $base-font-size*2;
+		cursor: pointer;
 	}
 }
