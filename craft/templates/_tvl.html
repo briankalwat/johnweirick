@@ -6,10 +6,25 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="home" href="{{ siteUrl }}" />
 	<link rel="stylesheet" href="/dist/css/master.css">
+
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-WXBKQMZ');</script>
+	<!-- End Google Tag Manager -->
+
+	<!-- New Relic -->
+	<script type="text/javascript">
+	window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);
+;NREUM.info={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",licenseKey:"b37b10afec",applicationID:"47790752",sa:1}
+</script>
+
+
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 	<script src="https://use.fontawesome.com/1fb83c4298.js"></script>
 	<script src="../dist/js/scroll-highlight.js"></script>
-	<script src="../dist/js/modals.js"></script>
 
 	<meta property="og:title" content="The Variable Life | Finding Clarity and Confidence in a World of Choices" />
 	<meta name="twitter:title" content="The Variable Life | Finding Clarity and Confidence in a World of Choices" />
@@ -30,6 +45,11 @@
 </head>
 
 <body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXBKQMZ"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
 	<section class="visuallyhidden">
 		<span>
 			<h1>The Variable Life</h1>
@@ -52,78 +72,25 @@
 		</nav>
 	</header>
 
-	{# <section>
-		<div class="shell hard">
-			<div class="ratio--square background--cover lap-wide-and-up-visuallyhidden" style="background-image: url('/dist/images/tvl.hero.5.1x1.jpg');"></div>
-			<div class="ratio--landscape background--cover lap-visuallyhidden handheld-visuallyhidden" style="background-image: url('/dist/images/tvl.hero.5.2x1.jpg');"></div>
-		</div>
-	</section> #}
-
 	<section id="intro" class="text-light-primary">
-		<div class="shell soft-sides handheld-soft-double-top lap-wide-and-up-soft-double-sides background--cover" style="background-image:url('/dist/images/tvl.section.2.2x1.jpg');">
+		<div class="shell soft-sides handheld-soft-double-top lap-wide-and-up-soft-double-sides background--cover" style="background-image:url('/dist/images/tvl.hero.8.2x1.jpg');">
 			<div class="cover-parent nd lap-wide-and-up-visuallyhidden"></div>
-			<div class="grid soft-ends">
+			<div class="grid soft-double-top handheld-hard-top">
 				<div class="grid__item lap-wide-and-up-one-half lap-text-center handheld-text-center">
 					<div class="constrain-copy">
-					<h2>On the brink of adulthood, one choice can change everything.</h2>
-					<p><i>Who will my friends be? Which college or career will I pursue? What does God want for me? Where will I find the answers?</i> These are the questions we ask ourselves in the midst of our biggest transitions. <b>This is a book about wrestling through those questions.</b></p>
-					<p><a href="#swag" class="btn btn--filled text-dark-primary">Buy The Book</a> <a href="#" class="btn">Start Reading Now</a></p>
+					<h2>The more variables you embrace, the greater beauty you'll discover.</h2>
+					<p><i>The Variable Life</i> is for people who want to find their way through the maze of variables, choices, and complexities of modern life, without losing sight of God or themselves.</p>
+					<p><a href="#" class="btn btn--filled text-light-primary">Buy The Book</a> <a href="https://dl.dropboxusercontent.com/u/8404103/The%20Variable%20Life%20Chapter%202%20excerpt.pdf" target="_blank" class="btn btn--light">Start Reading Now</a></p>
 					</div>
 				</div>
 			</div>
 		</div>
-	</section>
-
-	{# <section id="intro" class="background--dark-primary text-light-primary">
-		<div class="shell background--fill" style="background-image: url('/dist/images/tvl.hero.4.2x1.jpg');">
-			<div class="cover-parent nd"></div>
-			<div class="grid">
-				<div class="grid__item lap-wide-and-up-seven-twelfths">
-					<h2>"John Weirick encourages readers to ask big questions, take risks and move forward with confidence. If you feel stuck, scared or insecure, this book is for you."</h2>
-					<p>These are the questions we ask ourselves in the midst of our biggest transitions. <b>This is a book about wrestling through those questions.</b></p>
-					<p><a href="#swag" class="btn btn--filled text-dark-primary">Start Reading Now</a> <a href="#" class="btn">Buy The Book</a></p>
-				</div><div class="grid__item lap-wide-and-up-five-twelfths">
-					
-				</div>
-			</div>
-		</div>
-	</section> #}
-
-	{# <section id="intro" class="background--light-primary text-dark-primary">
-		<div class="shell hard">
-			<div class="grid floating floating--left flush">
-				<div class="grid__item floating__item lap-wide-and-up-one-half hard">
-					<div class="ratio--square background--fill" style="background-image: url('/dist/images/tvl.section.4.2x1.jpg');"></div>
-				</div><div class="grid__item floating__item lap-wide-and-up-one-half hard">
-					<div class="soft-double">
-						<p class="text-larger"><i>Who will my friends be? Which college or career will I pursue? What does God want for me? Where will I find the answers?</i></p>
-						<p>These are the questions we ask ourselves in the midst of our biggest transitions. <b>This is a book about wrestling through those questions.</b></p>
-						<p><a href="#swag" class="btn btn--filled">Start Reading Now</a> <a href="#" class="btn">Buy The Book</a></p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section> #}
-
-	{# <section class="background--dark-primary text-light-primary">
-		<div class="shell">
-			<div class="constrain-copy text-center">
-				<h2>On the brink of adulthood, one choice can change everything.</h2>
-				<p class="text-larger"><i>Who will my friends be? Which college or career will I pursue? What does God want for me? Where will I find the answers?</i></p>
-				<p>These are the questions we ask ourselves in the midst of our biggest transitions. <b>This is a book about wrestling through those questions.</b></p>
-				<p><a href="#swag" class="btn btn--filled text-dark-primary">Start Reading Now</a> <a href="#" class="btn">Buy The Book</a></p>
-			</div>
-		</div>
-	</section> #}
-
-	<section>
-		<div class="handheld-ratio--landscape lap-and-up-ratio--thin background--cover" style="background-image:url('/dist/images/tvl.hero.2.4x1.jpg');"></div>
 	</section>
 
 	<span id="book">
 	<section class="background--dark-tertiary text-light-primary">
 		<div class="shell constrain-page">
-			<div class="grid">
+			<div class="grid soft-top">
 				<div class="grid__item text-center push-bottom">
 					<h2 class="constrain-copy">About the Book</h2>	
 				</div>
@@ -142,21 +109,34 @@
 					</ul>
 				</div><div class="grid__item floating__item lap-wide-and-up-five-twelfths">
 					<p class="text-larger"><i>The Variable Life</i> is for people who want to find their way through the maze of variables, choices, and complexities of modern life, without losing sight of God or themselves.</p>
-					<p><a href="#swag" class="btn btn--filled text-dark-primary">Start Reading Now</a> <a href="#" class="btn" style="margin-top: 19.5px; margin-left: 0;">Buy The Book</a></p>
+					<p><a href="https://dl.dropboxusercontent.com/u/8404103/The%20Variable%20Life%20Chapter%202%20excerpt.pdf" target="_blank" class="btn btn--filled text-dark-secondary">Start Reading Now</a> <a href="#" class="btn" style="margin-top: 19.5px; margin-left: 0;">Buy The Book</a></p>
 				</div>
 			</div>
 		</div>
 	</section>
 	</span>
 
-	<section id="endorsements">
-		<div class="shell lap-wide-and-up-soft-double-sides constrain-page">
-			<div class="grid push-bottom">
-				<div class="grid__item text-center">
-					<h2>What People Are Saying</h2>	
+	<section class="text-light-primary">
+		<div class="shell soft-sides handheld-soft-double-top lap-wide-and-up-soft-double-sides background--cover" style="background-image:url('/dist/images/tvl.section.2.2x1.jpg');">
+			<div class="cover-parent nd lap-wide-and-up-visuallyhidden"></div>
+			<div class="grid">
+				<div class="grid__item lap-wide-and-up-one-half lap-text-center handheld-text-center">
+					<div class="constrain-copy">
+					<h2>On the brink of adulthood, one choice can change everything.</h2>
+					<p><i>Who will my friends be? Which college or career will I pursue? What does God want for me? Where will I find the answers?</i> These are the questions we ask ourselves in the midst of our biggest transitions. <b>This is a book about wrestling through those questions.</b></p>
+					<p><a href="#swag" class="btn btn--filled text-dark-primary">Buy The Book</a> <a href="https://dl.dropboxusercontent.com/u/8404103/The%20Variable%20Life%20Chapter%202%20excerpt.pdf" target="_blank" class="btn">Start Reading Now</a></p>
+					</div>
 				</div>
 			</div>
-			<div class="grid">
+		</div>
+	</section>
+
+	<section id="endorsements">
+		<div class="shell lap-wide-and-up-soft-double-sides constrain-page">
+			<div class="grid soft-ends">
+				<div class="grid__item text-center push-bottom">
+					<h2>What People Are Saying</h2>	
+				</div>
 				<div class="grid__item push-bottom lap-wide-and-up-push-double-bottom lap-wide-and-up-one-half">
 					<h5 class="normal-weight handheld-text-center handheld-push-half-bottom">"Mixing memoir with spiritual insights, <i>The Variable Life</i> challenges readers to know their own stories, re-examine the turning points in their lives and see what God has been teaching them through all the victories and the hardships. John Weirick encourages readers to ask big questions, take risks and move forward with confidence. If you feel stuck, scared or insecure, this book is for you."</h5>
 					<p class="text-right handheld-text-center flush"><span class="text-brand"><b>Dargan Thompson</b></span></p>
@@ -185,7 +165,7 @@
 			</div>
 			<div class="grid">
 				<div class="grid__item text-center">
-					<p><a href="#swag" class="btn btn--filled">Start Reading Now</a> <a href="#" class="btn">Buy The Book</a></p>
+					<p><a href="https://dl.dropboxusercontent.com/u/8404103/The%20Variable%20Life%20Chapter%202%20excerpt.pdf" target="_blank" class="btn btn--filled">Start Reading Now</a> <a href="#" class="btn">Buy The Book</a></p>
 					<p><a href="https://johnweirick.com/the-variable-life-reviews" target="_blank">Read More Reviews &amp; Endorsements</a></p>
 				</div>
 			</div>
@@ -193,13 +173,13 @@
 	</section>
 
 	<section>
-		<div class="palm-ratio--shuare palm-wide-ratio--landscape lap-ratio--landscape lap-wide-ratio--thin anchored-ratio--thin background--cover" style="background-image:url('/dist/images/tvl.section.4.2x1.jpg');"></div>
+		<div class="handheld-ratio--landscape lap-and-up-ratio--thin background--cover" style="background-image:url('/dist/images/tvl.hero.2.4x1.jpg');"></div>
 	</section>
 
 	<span id="author">	
 	<section class="background--dark-primary text-light-primary">
 		<div class="shell constrain-page">
-			<div class="grid floating">
+			<div class="grid soft-ends floating">
 				<div class="grid__item floating__item lap-wide-one-third anchored-one-third">
 					<div class="ratio--square background--cover image--rounded push-bottom lap-wide-flush-bottom anchored-flush-bottom" style="background-image: url('/dist/images/profile.1x1.jpg'); max-width: 240px; margin-left: auto; margin-right: auto;">
 					
@@ -215,9 +195,13 @@
 	</section>
 	</span>
 
+	<section>
+		<div class="palm-ratio--shuare palm-wide-ratio--landscape lap-ratio--landscape lap-wide-ratio--thin anchored-ratio--thin background--cover" style="background-image:url('/dist/images/tvl.section.4.2x1.jpg');"></div>
+	</section>
+
 	<section id="team" class="">
 		<div class="shell constrain-page">
-			<div class="grid">
+			<div class="grid soft-top">
 				<div class="grid__item text-center">
 					<h2>Join The Street Team</h2>	
 				</div>
@@ -233,7 +217,7 @@
 	<section id="swag" class="background--primary text-light-primary">
 		<div class="cover-parent background--cover  blurred" style="background-image: url('/dist/images/tvl.section.2.2x1.jpg'); opacity: .1;"></div>
 		<div class="shell constrain-page">
-			<div class="grid push-bottom">
+			<div class="grid soft-ends">
 				<div class="grid__item text-center">
 					<h2>Free Stuff</h2>	
 				</div>
@@ -241,8 +225,8 @@
 			<div class="grid">
 				<div class="grid__item lap-and-up-one-half text-center handheld-push-bottom">
 					<h3>The Variable Life Soundtrack</h3>
-					<p>Download the free 15-song The Variable Life Soundtrack featuring Andrew Belle, Lovedrug, Bora York, and more.</p>
-					<p><a class="btn btn--light" data-modal-open="1, soundtrack">Get it Now</a></p>
+					<p>Download the free 19-song soundtrack featuring Andrew Belle, Lovedrug, and Bora York. <a href="http://johnweirick.com" target="_blank">Learn more</a> about the songs and artists.</p>
+					<p><a href="http://thevariablelife.us5.list-manage1.com/subscribe?u=0a2ad44b21eb9f788d40764c9&id=ad3aa28db7" target="_blank" class="btn btn--light">Get it Now</a></p>
 				</div><div class="grid__item lap-and-up-one-half text-center">
 					<h3>Reading Guide</h3>
 					<p>Get more out of the book with these questions for your group discussion or personal reflection.</p>
@@ -314,6 +298,17 @@
 				toggle.find('i').addClass('fa-bars');
 			}
 		});
+	</script>
+
+	<!-- Google Analytics -->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-80508552-2', 'auto');
+	  ga('send', 'pageview');
 	</script>
 </body>
 </html>
