@@ -4,6 +4,16 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,800,800i');
 @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,900,900i');
 
+#intro .shell {
+	@include media-query(handheld) {
+		margin-top: -$base-spacing-unit*1.5;
+	}
+
+	@include media-query(lap) {
+		margin-top: -$base-spacing-unit*4;
+	}
+}
+
 // Fix for floating
 .floating:before, .floating--left:before, .floating--right:before, .floating--top:before, .floating--bottom:before {
 	margin-right: -.3em;
@@ -12,12 +22,6 @@
 body {
 	background-color: $dark-color;
 }
-
-// header + section {
-// 	@include media-query(lap-wide-and-up) {
-// 		padding-top: 85px;
-// 	}
-// }
 
 section {
 	position: relative;

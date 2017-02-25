@@ -73,7 +73,7 @@ $zindex: (
 $colors: (
   "primary": #e0aa17,
   "secondary": #BD9529,
-  "tertiary": #2A4930,
+  "tertiary": #6d7373,
 
   "dark-primary": #202020,
   "dark-secondary": #5e6567,
@@ -90,6 +90,8 @@ $colors: (
 //
 //
 $brand-color: map-get($colors, primary);
+$secondary-color: map-get($colors, secondary);
+$tertiary-color: map-get($colors, tertiary);
 $dark-color: map-get($colors, dark-primary);
 $light-color: map-get($colors, light-primary);
 
