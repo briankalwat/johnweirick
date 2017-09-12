@@ -136,6 +136,10 @@ hr {
 	}
 }
 
+input[type=checkbox] + label {
+	width: 31px;
+	height: 31px;
+}
 
 input.btn {
 	@extend %btn;
